@@ -27,16 +27,17 @@ def cal_weekday(year,month):
 
 def main():    
     count_week = 0
-    year = int(input("年份： "))
-    month = int(input("月份: "))
+    year = int(input("年份Year： "))
+    month = int(input("月份Month: "))
     print("\n")
-    print("\t\t" + str(year) + "年" + str(month) + "月")
+    print("\t\t" + str(year) + "." + str(month))
     print("\n")
     print("Sun\tMon\tTue\tWed\tThu\tFri\tSat")
     print("--------------------------------------------------------")   
     
     for i in range((cal_weekday(year,month)%7) + 1):
 ##两个个关键点： 1. 日历都是从周日开始 2. 公元元年一月一日，是周一。自己参详。 
+## Hints: 1. Calendar comes from Sunday. 2. 1st Jan, 1 is Monday.
         print("\t", end = '')
         count_week += 1
         
